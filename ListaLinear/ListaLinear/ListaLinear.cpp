@@ -103,5 +103,24 @@ void inserirElemento()
 
 void buscarElemento()
 {
-
+	if (nElementos != 0) {
+		int num = 0;
+		int pos = -1;
+		cout << "Digite o numero que deseja encontrar: ";
+		cin >> num;
+		for (int n = 0; n < nElementos; n++) {
+			if (num == lista[n]) {
+				pos = n;
+			}
+		}
+		if (pos != -1) {
+			cout << "Elemento encontrado na posicao: " << pos << endl;
+		}
+		else {
+			cout << "Elemento nao encontrado" << endl;
+		}
+	}
+	else {
+		cout << "Lista vazia" << endl;
+	}
 }
